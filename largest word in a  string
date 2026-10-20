@@ -1,0 +1,33 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string str, word = "", largest = "";
+    int i;
+
+    cout << "Enter a string: ";
+    getline(cin, str);
+
+    for (i = 0; i <= str.length(); i++)
+    {
+        if (str[i] != ' ' && str[i] != '\0')
+        {
+            word = word + str[i];
+        }
+        else
+        {
+            if (word.length() > largest.length())
+            {
+                largest = word;
+            }
+            word = "";
+        }
+    }
+
+    cout << "Largest word is: " << largest;
+
+    return 0;
+}
