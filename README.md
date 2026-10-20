@@ -1,2 +1,2 @@
-# Technical repository 
-There are some codes in this repository 
+# Subject - Technical 
+A collection of C++ programs, problem-solving exercises, and basic programming concepts.
