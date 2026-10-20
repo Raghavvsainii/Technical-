@@ -1,0 +1,87 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a[5], b[5], c[5];
+    int i, choice;
+    int largest, smallest, sum = 0;
+    float average;
+
+    cout << "Enter 5 elements of first array: ";
+    for (i = 0; i < 5; i++)
+        cin >> a[i];
+
+    cout << "Enter 5 elements of second array: ";
+    for (i = 0; i < 5; i++)
+        cin >> b[i];
+
+    cout << "\n1. Addition of arrays";
+    cout << "\n2. Subtraction of arrays";
+    cout << "\n3. Multiplication of arrays";
+    cout << "\n4. Largest and smallest element";
+    cout << "\n5. Average of array elements";
+    cout << "\nEnter your choice: ";
+    cin >> choice;
+
+    switch (choice)
+    {
+        case 1:
+            for (i = 0; i < 5; i++)
+                c[i] = a[i] + b[i];
+
+            cout << "Addition: ";
+            for (i = 0; i < 5; i++)
+                cout << c[i] << " ";
+            break;
+
+        case 2:
+            for (i = 0; i < 5; i++)
+                c[i] = a[i] - b[i];
+
+            cout << "Subtraction: ";
+            for (i = 0; i < 5; i++)
+                cout << c[i] << " ";
+            break;
+
+        case 3:
+            for (i = 0; i < 5; i++)
+                c[i] = a[i] * b[i];
+
+            cout << "Multiplication: ";
+            for (i = 0; i < 5; i++)
+                cout << c[i] << " ";
+            break;
+
+        case 4:
+            largest = smallest = a[0];
+
+            for (i = 1; i < 5; i++)
+            {
+                if (a[i] > largest)
+                    largest = a[i];
+
+                if (a[i] < smallest)
+                    smallest = a[i];
+            }
+
+            cout << "Largest = " << largest << endl;
+            cout << "Smallest = " << smallest;
+            break;
+
+        case 5:
+            for (i = 0; i < 5; i++)
+                sum = sum + a[i];
+
+            average = sum / 5.0;
+
+            cout << "Average = " << average;
+            break;
+
+        default:
+            cout << "Invalid choice";
+    }
+
+    return 0;
+}
